@@ -13,6 +13,7 @@ func main() {
 		Usage: "Just in local.",
 		Commands: []*cli.Command{
 			cmd.ClockCMD,
+			cmd.MemoCMD,
 		},
 	}
 
