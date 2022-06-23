@@ -9,7 +9,8 @@ import (
 
 func main() {
 	app := &cli.App{
-		Name: "locc",
+		Name:  "locc",
+		Usage: "Just in local.",
 		Commands: []*cli.Command{
 			cmd.ClockCMD,
 		},

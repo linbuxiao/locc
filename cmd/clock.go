@@ -46,7 +46,7 @@ func handleClock(num int, clo chan struct{}) {
 
 func handleSignal(clo chan struct{}) {
 	sig := make(chan os.Signal, 1)
-	signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM, syscall.SIGUSR2)
+	signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM)
 	<-sig
 	fmt.Println(gocolor.Blue("\nnice try."))
 	clo <- struct{}{}
